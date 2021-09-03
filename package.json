@@ -1,6 +1,6 @@
 {
   "name": "qcobjects-lib-cosmosdb",
-  "version": "0.0.1",
+  "version": "0.0.15",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QCObjects/qcobjects-lib-cosmosdb.git"
