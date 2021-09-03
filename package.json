@@ -1,0 +1,40 @@
+{
+  "name": "qcobjects-lib-cosmosdb",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QCObjects/qcobjects-lib-cosmosdb.git"
+  },
+  "scripts": {
+    "sync": "git add . && git commit -am ",
+    "test": "((npx eslint *.js api/**/*.js --fix) && (npx jasmine))",
+    "preversion": "(npm cache verify && npm test)",
+    "postversion": "git push && git push --tags",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "qcobjects",
+    "newapp",
+    "qcobjects-handler",
+    "js",
+    "javascript"
+  ],
+  "author": "Jean Machuca (correojean@gmail.com)",
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "jasmine": "^3.6.4",
+    "@azure/cosmos": "^3.12.3",
+    "eslint": ">= 7",
+    "eslint-config-qcobjects": "0.0.11",
+    "qcobjects": "latest",
+    "qcobjects-cli": "latest",
+    "qcobjects-sdk": "latest"
+  },
+  "peerDependencies": {
+    "jasmine": "^3.6.4",
+    "@azure/cosmos": "^3.12.3",
+    "qcobjects": ">= 2.3",
+    "qcobjects-sdk": ">= 2.3",
+    "qcobjects-cli": ">= 2.3"
+  }
+}

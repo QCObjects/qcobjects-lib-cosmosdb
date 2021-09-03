@@ -1,0 +1,9 @@
+{
+  "CosmosDB":{
+    "endpoint": "$ENV(COSMOSDB_ENDPOINT)",
+    "key": "$ENV(COSMOSDB_API_KEY)",
+    "database": "$ENV(COSMOSDB_DATABASE)",
+    "userAgentSuffix": "QCObjectsCosmosDBAPIClient",
+    "partitionKey": ["$ENV(COSMOSDB_PARTITION_KEY)"]
+  }
+}
