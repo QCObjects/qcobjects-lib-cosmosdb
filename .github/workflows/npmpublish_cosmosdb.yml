@@ -18,6 +18,11 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
+        env:
+          COSMOSDB_ENDPOINT: ${{secrets.COSMOSDB_ENDPOINT}}
+          COSMOSDB_API_KEY: ${{secrets.COSMOSDB_API_KEY}}
+          COSMOSDB_DATABASE: ${{secrets.COSMOSDB_DATABASE}}
+          COSMOSDB_PARTITION_KEY: ${{secrets.COSMOSDB_PARTITION_KEY}}
 
   publish-npm:
     needs: build
@@ -34,7 +39,3 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          COSMOSDB_ENDPOINT: ${{secrets.COSMOSDB_ENDPOINT}}
-          COSMOSDB_API_KEY: ${{secrets.COSMOSDB_API_KEY}}
-          COSMOSDB_DATABASE: ${{secrets.COSMOSDB_DATABASE}}
-          COSMOSDB_PARTITION_KEY: ${{secrets.COSMOSDB_PARTITION_KEY}}
